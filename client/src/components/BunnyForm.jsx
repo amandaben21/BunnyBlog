@@ -61,18 +61,19 @@ const BunnyForm = () => {
         {errors.desc ? <p className="text-danger">{errors.desc}</p> : ''}
         
         <div className="form-group">
-          <label htmlFor="title">Title of Your Bunny Blog:</label>
+          <h5 htmlFor="title">Title of Your Bunny Blog:</h5>
           <input type="text" className="form-control" name="title" id="title" onChange={onChangeHandler} />
         </div>
 
         <div className="form-group">
-          <label htmlFor="name">Your Name:</label>
+          <h5 htmlFor="name">Your Name:</h5>
           <input type="text" className="form-control" name="name" id="name" onChange={onChangeHandler} />
         </div>
 
         <div className="form-group">
-          <label htmlFor="desc">Write your Blog:</label>
-          <input type="textarea" className="form-control" name="desc" id="desc" onChange={onChangeHandler} />
+        <h5 htmlFor="name">Write  your Blog:</h5>
+          {/* <label htmlFor="desc">Write your Blog:</label> */}
+          <textarea rows={7}className="form-control" name="desc" id="desc" onChange={onChangeHandler} />
         </div>
 
         <button className="btn btn-info mt-3">Add Your Bunny Blog</button>

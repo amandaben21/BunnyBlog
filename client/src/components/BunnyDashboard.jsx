@@ -28,13 +28,12 @@ const BunnyDashboard = () => {
     }
   return (
     <div>
-        <h1 className='mx-auto'>Bunny Finder</h1>
+        <h1 className='mx-auto center'>Bunny Blogs!</h1>
         <table className="col-md-6 mx-auto mt-4">
             <thead>
                 <tr>
-                    <th>Title of Blog!</th>
+                    <th>Title of Blogs!</th>
                     <th>By:</th>
-                    {/* <th>Open</th> */}
                     <th>Remove</th>
                 </tr>
             </thead>
@@ -44,7 +43,6 @@ const BunnyDashboard = () => {
                         <tr key={bunny._id}>
                             <td><Link to={`${bunny._id}`}>{bunny.title}</Link></td>
                             <td>{bunny.name}</td>
-                            {/* <td>{bunny.open}</td> */}
                             <td>
                                 <button className="btn btn-danger" onClick={(e) => deleteBunny(bunny._id)}>Delete</button>
                             </td>

@@ -45,8 +45,8 @@ const EditBunny = (props) => {
             </div>
 
             <div className="form-group">
-                <label htmlFor="desc">Write your Blog:</label>
-                <input type="textarea" name="desc" id="desc" className="form-control" value={oneBunny.desc} onChange={changeHandler}/>
+                <label htmlFor="desc">Blog:</label>
+                <textarea rows={7} name="desc" id="desc" className="form-control" value={oneBunny.desc} onChange={changeHandler}/>
             </div>
             <button className="btn btn-info mt-3">Edit Bunny</button>
         </form>

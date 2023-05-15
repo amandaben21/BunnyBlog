@@ -31,9 +31,9 @@ const OneBunny = (props) => {
   return (
     <div>
         
-        <h1>Title of Your Bunny Blog: {oneBunny.title}</h1>
-        <p>Your Name: {oneBunny.name}</p>
-        <p>Write your Blog: {oneBunny.desc}</p>
+        <h1>{oneBunny.title}</h1>
+        <h6>By: {oneBunny.name}</h6>
+        <p className="col-md-6 mx-auto">{oneBunny.desc}</p>
 
         <button className="btn btn-info " onClick={(e) => navigateToEditBunny(oneBunny._id)}>Edit Bunny</button>
         <button className="btn btn-danger" onClick={deleteBunny}>Delete Bunny</button>
