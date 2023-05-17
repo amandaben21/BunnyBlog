@@ -16,7 +16,7 @@ const BunnySchema = new mongoose.Schema({
     desc:{
         type: String,
         require: [true, "Your writing is required"],
-        minlength: [50, "Your blog must be at least 50 characters long"]
+        minlength: [5, "Your blog must be at least 5 characters long"]
     },
 
 }, { timestamps: true })

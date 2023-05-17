@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
+import "../App.css" 
 
 
 const BunnyDashboard = () => {
@@ -44,14 +45,14 @@ const BunnyDashboard = () => {
                             <td><Link to={`${bunny._id}`}>{bunny.title}</Link></td>
                             <td>{bunny.name}</td>
                             <td>
-                                <button className="btn btn-danger" onClick={(e) => deleteBunny(bunny._id)}>Delete</button>
+                                <button className="btn" onClick={(e) => deleteBunny(bunny._id)}>Delete</button>
                             </td>
                         </tr>
                     )
                 })}
             </tbody>
         </table>
-        <button className="btn btn-info offset-5 mt-3" onClick={navigateToBunnyForm}>Create a Bunny Blog!</button>
+        <button className="btn btn2 offset-5 mt-3" onClick={navigateToBunnyForm}>Create a Bunny Blog!</button>
     </div>
   )
 }

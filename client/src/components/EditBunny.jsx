@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import "../App.css"
 
 
 const EditBunny = (props) => {
@@ -48,7 +49,7 @@ const EditBunny = (props) => {
                 <label htmlFor="desc">Blog:</label>
                 <textarea rows={7} name="desc" id="desc" className="form-control" value={oneBunny.desc} onChange={changeHandler}/>
             </div>
-            <button className="btn btn-info mt-3">Edit Bunny</button>
+            <button className="btn2 btn mt-3">Edit Bunny</button>
         </form>
     </div>
   )

@@ -26,7 +26,7 @@ const BunnyForm = () => {
     if (bunny.name.length < 3) {
       return false;
     }
-    if (bunny.name.desc< 50) {
+    if (bunny.desc  < 3) {
         return false;
       }
     return isValid;
@@ -43,9 +43,9 @@ const BunnyForm = () => {
 
     if (errors) {
       setErrors({
-        title: "Title of Bunny Blog is required",
-        name: "Your name is required",
-        desc: "Your writing is required"
+        title: "Title of Bunny Blog is required at least 3 characters",
+        name: "Your name is required at least 3 characters",
+        desc: "Your writing is required at least  characters"
       });
     }
   };
@@ -61,19 +61,19 @@ const BunnyForm = () => {
         {errors.desc ? <p className="text-danger">{errors.desc}</p> : ''}
         
         <div className="form-group">
-          <h5 htmlFor="title">Title of Your Bunny Blog:</h5>
+          <label htmlFor="title">Title of Your Bunny Blog:</label>
           <input type="text" className="form-control" name="title" id="title" onChange={onChangeHandler} />
         </div>
 
         <div className="form-group">
-          <h5 htmlFor="name">Your Name:</h5>
+          <label htmlFor="name">Your Name:</label>
           <input type="text" className="form-control" name="name" id="name" onChange={onChangeHandler} />
         </div>
 
         <div className="form-group">
-        <h5 htmlFor="name">Write  your Blog:</h5>
+        <label htmlFor="name">Write  your Blog:</label>
           {/* <label htmlFor="desc">Write your Blog:</label> */}
-          <textarea rows={7}className="form-control" name="desc" id="desc" onChange={onChangeHandler} />
+          <textarea rows={7} className="form-control" name="desc" id="desc" onChange={onChangeHandler} />
         </div>
 
         <button className="btn btn-info mt-3">Add Your Bunny Blog</button>

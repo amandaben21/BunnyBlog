@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-
+import "../App.css"
 
 
 const OneBunny = (props) => {
@@ -35,8 +35,8 @@ const OneBunny = (props) => {
         <h6>By: {oneBunny.name}</h6>
         <p className="col-md-6 mx-auto">{oneBunny.desc}</p>
 
-        <button className="btn btn-info " onClick={(e) => navigateToEditBunny(oneBunny._id)}>Edit Bunny</button>
-        <button className="btn btn-danger" onClick={deleteBunny}>Delete Bunny</button>
+        <button className="btn btn" onClick={(e) => navigateToEditBunny(oneBunny._id)}>Edit Bunny</button>
+        <button className="btn2 btn" onClick={deleteBunny}>Delete Bunny</button>
     </div>
   )
 }
